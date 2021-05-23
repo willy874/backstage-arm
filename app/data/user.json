@@ -1,0 +1,49 @@
+{
+  "id": 1,
+  "name": "AdminUser",
+  "email": "willy@gmail.com",
+  "account": "admin",
+  "password": "admin",
+  "auth": [
+    {
+      "id": 1,
+      "name": "Activity",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    {
+      "id": 2,
+      "name": "Home",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    {
+      "id": 3,
+      "name": "Message",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    {
+      "id": 4,
+      "name": "Project",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    {
+      "id": 5,
+      "name": "User",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    }
+  ]
+}

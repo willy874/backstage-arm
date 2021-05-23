@@ -1,0 +1,103 @@
+.router-style {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+.router-fade {
+  &.router-enter-active {
+    transition: opacity 600ms ease;
+  }
+  &.router-enter {
+    opacity: 0;
+  }
+  &.router-enter-to {
+    opacity: 1;
+  }
+  &.router-leave-active {
+    transition: opacity 600ms ease;
+  }
+  &.router-leave {
+    opacity: 1;
+  }
+  &.router-leave-to {
+    opacity: 0;
+  }
+}
+.router-slide-right {
+  &.router-enter-active,
+  .router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-enter {
+    --translate-x: -100%;
+  }
+  &.router-enter-to {
+    --translate-x: 0;
+  }
+  &.router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-leave {
+    --translate-x: 0;
+  }
+  &.router-leave-to {
+    --translate-x: 100%;
+  }
+}
+.router-slide-left {
+  &.router-enter-active,
+  .router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-enter {
+    --translate-x: 100%;
+  }
+  &.router-enter-to {
+    --translate-x: 0;
+  }
+  &.router-leave {
+    --translate-x: 0;
+  }
+  &.router-leave-to {
+    --translate-x: -100%;
+  }
+}
+.router-slide-bottom {
+  &.router-enter-active,
+  .router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-enter {
+    --translate-y: -100%;
+  }
+  &.router-enter-to {
+    --translate-y: 0;
+  }
+  &.router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-leave {
+    --translate-y: 0;
+  }
+  &.router-leave-to {
+    --translate-y: 100%;
+  }
+}
+.router-slide-top {
+  &.router-enter-active,
+  .router-leave-active {
+    transition: transform 400ms ease;
+  }
+  &.router-enter {
+    --translate-y: 100%;
+  }
+  &.router-enter-to {
+    --translate-y: 0;
+  }
+  &.router-leave {
+    --translate-y: 0;
+  }
+  &.router-leave-to {
+    --translate-y: -100%;
+  }
+}

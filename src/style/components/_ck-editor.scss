@@ -1,0 +1,13 @@
+.ck.ck-reset.ck-editor {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .ck.ck-editor__main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    .ck.ck-content {
+      flex-grow: 1;
+    }
+  }
+}

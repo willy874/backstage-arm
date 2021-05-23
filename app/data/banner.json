@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "sort": 0,
+    "published_at": "2021/05/11",
+    "finished_at": "2021/05/11",
+    "created_at": "2021/05/11",
+    "updated_at": "2021/05/11",
+    "deleted_at": "",
+    "created_user": "",
+    "updated_user": "Admin",
+    "deleted_user": "",
+    "uuid": "",
+    "name": "",
+    "size": "",
+    "image_name": "",
+    "image_ext": "",
+    "type": "",
+    "image_url": "http://localhost:4000/images/index-banner.png",
+    "image_alt": "",
+    "image_title": "",
+    "image_link": "",
+    "image_blob": "",
+    "image_base64": "",
+    "status": 0
+  }
+]

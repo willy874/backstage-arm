@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>&#x9996;&#x9801; -臺北市社會住宅招租網</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/earlyaccess/notosanstc.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/colorbox.css" />
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    
+        <link rel="stylesheet" href="/css/site.min.css" />
+    
+    
+    
+    <link href='/js/fancybox-2.1.7/source/jquery.fancybox.css' rel='stylesheet' type='text/css'>
+    <link href='/js/fancybox-2.1.7/source/helpers/jquery.fancybox-thumbs.css' rel='stylesheet' type='text/css'>
+    <link href='/js/fancybox-2.1.7/source/helpers/jquery.fancybox-buttons.css' rel='stylesheet' type='text/css'>
+    <style>
+        .rent-effect {
+            overflow: hidden;
+        }
+
+            .rent-effect:hover img {
+                opacity: 0.8;
+                transform: scale(1);
+                transition: all 0.6s;
+            }
+
+            .rent-effect .mask {
+                height: 20%;
+                overflow: hidden;
+            }
+
+        .search-icon {
+            position: absolute;
+            line-height: 3rem;
+        }
+
+        .rent-effect:hover .mask {
+            height: 100%;
+            transition: all 0.6s;
+        }
+
+        .rent-effect:hover .search-icon {
+            top: 42%;
+            left: 50%;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px 2px;
+        }
+
+
+        #gold-plate-1 {
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-gap: 15px;
+            grid-template-areas: "img1 img1 text""img2 img3 text ";
+        }
+
+            #gold-plate-1 > div:nth-of-type(1) {
+                grid-area: img1;
+            }
+
+            #gold-plate-1 > div:nth-of-type(2) {
+                grid-area: img2;
+            }
+
+            #gold-plate-1 > div:nth-of-type(3) {
+                grid-area: img3;
+            }
+
+            #gold-plate-1 > div:nth-of-type(4) {
+                grid-area: text;
+            }
+
+        .thumb-media {
+            width: 35%;
+        }
+
+        @media(max-width: 1200px) {
+            #gold-plate-1 {
+                grid-template-columns: 5fr 7fr;
+                grid-template-areas: "img1 text""img2 text""img3 text";
+            }
+        }
+
+        @media(max-width: 992px) {
+            #gold-plate-1 {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "img1  img1""text text""img2 img3";
+            }
+        }
+
+        @media(max-width: 768px) {
+            #gold-plate-1 {
+                grid-template-columns: 1fr;
+                grid-template-areas: "img1""text""img2""img3";
+            }
+        }
+
+        @media(max-width: 575.89px) {
+            .thumb-media {
+                width: 100%;
+            }
+        }
+
+        .stretched-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        .poa-left-bottom {
+            text-align: left;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .fancybox-nav {
+            height: 90% !important;
+        }
+
+        .kindergarten-apply{
+            position: relative;
+            display: inline-block;
+        }
+
+            .kindergarten-apply::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-left: 16px solid #0075A9;
+                border-bottom: 8px solid transparent;
+            }
+
+            .kindergarten-apply::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-right: 16px solid #0075A9;
+                border-bottom: 8px solid transparent;
+            }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div id="header" class="bg-primary" style="position:relative; z-index: 1040;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-9 py-3">
+                        <a href="/" class="navbar-brand">
+                            <img src="/images/logo/taipei-gov.png" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col d-lg-flex d-none align-items-end flex-row">
+                        <ul class="nav justify-content-end w-100 pb-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white pb-0" href="/Checkpoint">申請檢核</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="text-white pt-1">|</div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white pb-0" href="#" id="navbarExplain"
+                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    配租概況
+                                </a>
+                                <div class="dropdown-menu border-primary" aria-labelledby="navbarExplain"
+                                     style="margin-top:7px;">
+                                    <a class="dropdown-item" href="/Explain">配租概況表</a>
+                                    <a class="dropdown-item" href="/Explain/HouseLocation">國/社會住宅位置</a>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="text-white pt-1">|</div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white pb-0" href="/News">最新消息</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="text-white pt-1">|</div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white pb-0" href="/Statistics">收件統計</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="text-white pt-1">|</div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white pb-0" href="/Note">操作說明</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="text-white pt-1">|</div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white pb-0" href="https://hello.gov.taipei/Front/main"
+                                   target="_blank">意見反映</a>
+                            </li>
+                        </ul>
+                            
+                                <a href="#"
+                                   class="d-none d-lg-block position-absolute bg-white text-primary h6 mb-0 font-weight-bold px-3 py-2"
+                                   style="top:0px; right:15px; box-shadow: 0 0 18px rgba(0, 0, 0, 0.46);"
+                                   data-toggle="modal" data-target="#beforeLoginModal">線上申請</a>
+                            
+                            
+                    </div>
+                    <div class="col d-lg-none d-flex text-right align-items-center justify-content-end">
+                        <button class="navbar-toggler minus  collapsed" type="button" data-toggle="collapse"
+                                data-target="#menu_panel" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            
+<div class="container banner position-relative pt-sm-4 pt-0" style="line-height: 0; font-size: 0;">
+    <img class="img-fluid" src="/images/carousels/banner_02.png">
+</div>
+<div class="container" style="margin-top: 2rem;">
+
+    <h2 class="subjectA text-primary text-center py-2 mb-3">明倫社會住宅</h2>
+    <section class="row" style="margin-bottom: 2rem;">
+        <figure class="col-12 col-lg-6">
+            <div class="position-relative rounded" style='
+                    background-image: url(/images/minglun/banner.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 500px;
+                    box-shadow: 0 0 0 1px #dee2e6;
+                    border: 8px solid white;
+                '>
+                <a class="stretched-link" href="/Rental/Site/minglun"></a>
+                <figcaption class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                            style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">
+                    明倫社會住宅
+                </figcaption>
+            </div>
+        </figure>
+        <div class="col-12 col-lg-6">
+            <h3 class="pl-5"
+                style='background-image: url(images/line_01.jpg); background-repeat: no-repeat; background-position:15px 0px;'>
+                明倫社會住宅
+            </h3>
+            <div class="p-2 float-md-right thumb-media position-relative">
+                <a href="https://www.youtube.com/watch?v=QAKGMUPvH5A" class="fancybox stretched-link" title="興隆社宅心榮新生活" rel="fancybox">
+                    <img src="https://img.youtube.com/vi/QAKGMUPvH5A/0.jpg" class="img-fluid">
+                </a>
+            </div>
+            <p class="text-muted">
+                明倫社宅坐落於大同區保安里，位於臺北市大同區承德路三段285號，距圓山捷運站約500公尺，全區共380戶，為地上11層、地下2層之建築。
+            </p>
+            <a class="d-block" href="/documents/ming-lun/明倫公告.pdf" target="_blank" title="明倫社會住宅受理申請承租公告附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社會住宅受理申請承租公告 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/臺北市3合1及明倫社會住宅家具冷暖氣租賃服務媒合平台公告.pdf" target="_blank" title="及明倫社會住宅家具冷暖氣租賃服務媒合平台公告點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">三合一及明倫招租-租賃平台公告(PDF) [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/ming-lun/青年創新回饋計畫第二階段評選結果公告.pdf" target="_blank" title="青年創新回饋計畫第二階段評選結果公告下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">青年創新回饋計畫第二階段評選結果公告 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/ming-lun/青年創新回饋計畫第二階段評選結果.pdf" target="_blank" title="青年創新回饋計畫第二階段評選結果下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">青年創新回饋計畫第二階段評選結果 (PDF) [點此下載]</span>
+            </a>
+            <p class="m-0 text-danger">
+                <i class="material-icons align-middle">date_range</i>
+                <span class="align-middle">受理期間: 109年11月26日上午9時起至109年12月9日下午5時止(已截止)</span>
+            </p>
+            <p class="my-1 mx-4 text-primary kindergarten-apply">109學年度明倫非營利幼兒園新生入園預約登記報名</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="subjectA text-center py-1 mb-2">
+                        <a class="d-block" href="/documents/ming-lun/109學年度明倫非營利幼兒園新生入園預約登記報名Q_A.pdf" target="_blank" title="109學年度明倫非營利幼兒園新生入園預約登記報名Q_A下載">Q&A.pdf</a>
+                    </div>
+                    <div class="subjectA text-center py-1">
+                        <a class="d-block" href="/documents/ming-lun/明倫非營利幼兒園109學年度預約登記報名簡章.pdf" target="_blank" title="明倫非營利幼兒園109學年度預約登記報名簡章下載">簡章.pdf</a>
+                    </div>
+                </div>
+                <div class="col-8 d-flex align-items-center">
+                    <p class="mb-0 text-secondary">
+                        明倫非營利幼兒園報名簡章事宜<br>
+                        可電洽 教育局吳小姐1999轉6388<br>
+                        或兆陽文教發展協會 陸小姐02-2304-5061
+                    </p>
+                </div>
+            </div>
+            <a class="d-block mb-1" href="/documents/ming-lun/臺北市政府社會局辦理本市明倫社會住宅其他特殊情形身分戶評點分數第一次公告.pdf" target="_blank" title="臺北市政府社會局辦理本市明倫社會住宅其他特殊情形身分戶評點分數第一次公告附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社會住宅其他特殊情形身分戶評點分數第一次公告 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block mb-1" href="/documents/ming-lun/明倫社會住宅其他特殊情形身分戶評點分數再次公告.pdf" target="_blank" title="明倫社會住宅其他特殊情形身分戶評點分數再次公告附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社會住宅其他特殊情形身分戶評點分數再次公告 (PDF) [點此下載]</span>
+            </a>
+            <span class="text-secondary">
+                評點分數第一次公告如有疑義請電洽社會局綜合企劃科電話 1999(外縣市撥打 02-2720-8889)轉 6975或 6976。
+            </span>
+            <a class="d-block mb-1" href="/documents/ming-lun/已配租戶.pdf" target="_blank" title="明倫社宅-地址清冊-已配租戶地址清冊附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">110年2月23日明倫選屋作業-已配租戶地址清冊 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block mb-1" href="/documents/ming-lun/明倫社宅X大金空調-小資族輕鬆月租專案.pdf" target="_blank" title="明倫社宅X大金空調-小資族輕鬆月租專案附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社宅X大金空調-小資族輕鬆月租專案 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block mb-1" href="/documents/ming-lun/明倫社宅X珍萬國家具-以租代買租賃服務.pdf" target="_blank" title="明倫社宅X珍萬國家具-以租代買租賃服務附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社宅X珍萬國家具-以租代買租賃服務 (PDF) [點此下載]</span>
+            </a>
+            <a class="d-block mb-1" href="/documents/ming-lun/明倫社宅X走走家具-家具租賃方案.pdf" target="_blank" title="明倫社宅X走走家具-家具租賃方案附件下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">明倫社宅X走走家具-家具租賃方案 (PDF) [點此下載]</span>
+            </a>
+        </div>
+    </section>
+
+    <h2 class="subjectA text-primary text-center py-2 mb-3">三合一聯合招租</h2>
+    <section class="row" style="margin-bottom: 2rem;">
+        <div class="col-12 col-lg-6">
+            <figure class="position-relative rounded" style='
+                    background-image: url(/images/muzha/banner.png);
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    box-shadow: 0 0 0 1px #dee2e6;
+                    border: 8px solid white;
+                '>
+                <a class="stretched-link" href="/Rental/Site/muzha"></a>
+                <figcaption class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                            style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">木柵社會住宅</figcaption>
+            </figure>
+        </div>
+        <figure class="col-12 col-lg-6">
+            <div class="position-relative rounded" style='
+                    background-image: url(/images/daqiaotou/banner.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    box-shadow: 0 0 0 1px #dee2e6;
+                    border: 8px solid white;
+                '>
+                <a class="stretched-link" href="/Rental/Site/daqiaotou"></a>
+                <figcaption class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                            style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">
+                    大橋頭社會住宅
+                </figcaption>
+            </div>
+        </figure>
+        <figure class="col-12 col-lg-6">
+            <div class="position-relative rounded" style='
+                    background-image: url(/images/jinlong/banner.png);
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    box-shadow: 0 0 0 1px #dee2e6;
+                    border: 8px solid white;
+                '>
+                <a class="stretched-link" href="/Rental/Site/jinlong"></a>
+                <figcaption class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                            style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">
+                    金龍都更分回戶
+                </figcaption>
+            </div>
+        </figure>
+        <div class="col-12 col-lg-6">
+            <h3 class="pl-5"
+                style='background-image: url(images/line_01.jpg); background-repeat: no-repeat; background-position:15px 0px;'>
+                三合一招租
+            </h3>
+            <div class="p-2 float-md-right thumb-media position-relative">
+                <a href="https://www.youtube.com/watch?v=o_nTosJRxz8" class="fancybox stretched-link" title="臺北社宅考前衝剌班" rel="fancybox">
+                    <img src="https://img.youtube.com/vi/o_nTosJRxz8/0.jpg" class="img-fluid">
+                </a>
+            </div>
+            <ul class="text-muted">
+                <li>木柵社宅提供一房、二房及三房共86戶，地面層規劃有門廳、物業管理室及一般零售業店鋪。</li>
+                <li>大橋頭社宅提供一房及二房共47戶，社區內有閱覽室、交誼廳、健身房、親子空間及景觀花園等設施。</li>
+                <li>金龍都更分回戶提供二房、三房共計8戶，社區內有交誼廳、閱讀室、空中花園等設施。</li>
+            </ul>
+            <a class="d-block" href="/documents/臺北市3合1及明倫社會住宅家具冷暖氣租賃服務媒合平台公告.pdf" target="_blank" title="及明倫社會住宅家具冷暖氣租賃服務媒合平台公告點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">三合一及明倫招租-租賃平台公告(PDF) [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/木柵等三處社宅招租公告.pdf" target="_blank" title="木柵等三處社宅招租公告點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">木柵等三處社宅招租公告 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/本市歷次社宅其他特殊情形身分戶評點制辦理情形.pdf" target="_blank" title="本市歷次社宅其他特殊情形身分戶評點制辦理情形點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">本市歷次社宅其他特殊情形身分戶評點制辦理情形 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/金龍都更分回戶、木柵、大橋頭等社會住宅評點複查公告文字.pdf" target="_blank" title="金龍都更分回戶、木柵、大橋頭等社會住宅評點複查公告文字點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">木柵等 3 處社宅其他特殊情形戶評點分數再次公告 [點此下載]</span>
+            </a>
+            <p class="m-0 text-danger">
+                <i class="material-icons align-middle">date_range</i>
+                <span class="align-middle">受理期間: 109年10月12日上午9時起至109年10月23日下午5時止(已截止)</span>
+            </p>
+            <a class="d-block" href="/documents/three-in-one-rental/木柵社宅X大金空調-小資族輕鬆月租專案.pdf" target="_blank" title="木柵社宅X大金空調-小資族輕鬆月租專案點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">木柵社宅X大金空調-小資族輕鬆月租專案 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/木柵社宅X珍萬國家具-以租代買租賃服務.pdf" target="_blank" title="木柵社宅X珍萬國家具-以租代買租賃服務點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">木柵社宅X珍萬國家具-以租代買租賃服務 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/木柵社宅X走走家具-家具租賃方案.pdf" target="_blank" title="木柵社宅X走走家具-家具租賃方案點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">木柵社宅X走走家具-家具租賃方案 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/大橋頭社宅X大金空調-小資族輕鬆月租專案.pdf" target="_blank" title="大橋頭社宅X大金空調-小資族輕鬆月租專案點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">大橋頭社宅X大金空調-小資族輕鬆月租專案 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/大橋頭社宅X珍萬國家具-以租代買租賃服務.pdf" target="_blank" title="大橋頭社宅X珍萬國家具-以租代買租賃服務點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">大橋頭社宅X珍萬國家具-以租代買租賃服務 [點此下載]</span>
+            </a>
+            <a class="d-block" href="/documents/three-in-one-rental/大橋頭社宅X走走家具-家具租賃方案.pdf" target="_blank" title="大橋頭社宅X走走家具-家具租賃方案點此下載">
+                <i class="material-icons align-middle">comment</i>
+                <span class="align-middle">大橋頭社宅X走走家具-家具租賃方案 [點此下載]</span>
+            </a>
+        </div>
+    </section>
+</div>
+
+<div class="container pt-lg-5 pt-3">
+
+    <div class="row">
+            <div class="col-lg-4 pb-lg-0 pb-4">
+                <div class="d-flex flex-row mb-3">
+                    <div>
+                        <h2 class="text-danger m-0">News</h2>
+                        <h4 class="m-0 text-secondary font-weight-light">最新消息</h4>
+                    </div>
+                    <div class="pt-1 pl-1">
+                        <img src="/images/icons/line_02.png" class="img-fluid">
+                    </div>
+                </div>
+                <a href="/News" class="d-block" style="max-height: 192px; overflow:hidden;">
+                        <img src="/images/news/n_01.jpg" class="img-fluid">
+                </a>
+                <h5 class="mt-2 font-weight-bold" style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">
+                    &#x8FA6;&#x7406;109&#x5E74;&#x5EA6;&#x672C;&#x5E02;&#x5065;&#x5EB7;&#x793E;&#x6703;&#x4F4F;&#x5B85;&#x4E00;&#x822C;&#x6236;&#xFF08;&#x672C;&#x5E02;&#x5E02;&#x6C11;&#x53CA;&#x5C31;&#x5B78;&#x5C31;&#x696D;&#x8EAB;&#x5206;&#xFF09;&#x96A8;&#x5230;&#x96A8;&#x8FA6;&#x516C;&#x544A;&#x51FA;&#x79DF;&#x3002;
+                </h5>
+                <div class="text-secondary mb-xl-4 mb-2">
+                    <p>&#x4E3B;&#x65E8;&#xFF1A;&#x8FA6;&#x7406;109&#x5E74;&#x5EA6;&#x672C;&#x5E02;&#x5065;&#x5EB7;&#x793E;&#x6703;&#x4F4F;&#x5B85;&#x4E00;&#x822C;&#x6236;&#xFF08;&#x672C;&#x5E02;&#x5E02;&#x6C11;&#x53CA;&#x5C31;&#x5B78;&#x5C31;&#x696D;&#x8EAB;&#x5206;&#xFF09;&#x96A8;&#x5230;&#x96A8;&#x8FA6;&#x516C;&#x544A;&#x51FA;&#x79DF;&#x3002;&#xD;&#xA;    &#x4F9D;&#x64DA;&#xFF1A;&#x4F9D;&#x300C;&#x81FA;&#x5317;&#x5E02;&#x793E;&#x6703;&#x4F4F;&#x5B85;&#x51FA;&#x79DF;&#x8FA6;&#x6CD5;&#x300D;&#x7B2C;&#x4E03;&#x689D;&#x898F;&#x5B9A;&#x8FA6;&#x7406;&#x3002;&#xD;&#xA;    &#x516C;&#x544A;&#x4E8B;&#x9805;&#xFF1A;&#xD;&#xA;    &#x4E00;&#x3001;&#x79DF;&#x8CC3;&#x6A19;&#x7684;&#x3001;&#x671F;&#x9650;&#xFF1A;&#xD;&#xA;    (&#x4E00;)&#x6A19;&#x7684;&#x5EA7;&#x843D;&#xFF1A;&#x81FA;&#x5317;&#x5E02;&#x677E;&#x5C71;&#x5340;&#x5065;&#x5EB7;&#x8DEF;285&#x3001;295&#x3001;305&#x3001;309&#x3001;317&#x53CA;323&#x865F;&#x7B49;&#x3002;...</p>
+                </div>
+                <div class="text-right d-none d-lg-block">
+                    <a href="/News">
+                        <img src="/images/icons/more.png" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <div class="d-flex flex-row mb-3">
+                <div>
+                    <h2 class="text-danger m-0">Explanation</h2>
+                    <h4 class="m-0 text-secondary font-weight-light">配租概況</h4>
+                </div>
+                <div class="pt-1 pl-1">
+                    <img src="/images/icons/line_02.png" class="img-fluid">
+                </div>
+            </div>
+            <a href="/Explain" class="position-relative d-block">
+                <img src="/images/p_01.jpg" class="w-100">
+                <div class="position-absolute w-100 h-100" style="background-color:rgba(0, 0, 0, 0.45); top:0;"></div>
+                <div class="position-absolute w-100 text-center hoverA" style="top: 50%; margin-top: -41px;">
+                    <img src="/images/icon_04.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <div class="d-flex flex-row mb-3">
+                <div>
+                    <h2 class="text-danger m-0">Video</h2>
+                    <h4 class="m-0 text-secondary font-weight-light">影音專區</h4>
+                </div>
+                <div class="pt-1 pl-1">
+                    <img src="/images/icons/line_02.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="position-relative">
+                <img src="/images/video/videoBanner02.jpg" class="w-100">
+                <div class="position-absolute w-100 h-100" style="background-color:rgba(0, 0, 0, 0.45); top:0;"></div>
+                <div class="position-absolute w-100 text-center hoverA" style="top: 50%; margin-top: -41px;">
+                    <img src="/images/icon_04.png">
+                </div>
+                <a href="https://www.youtube.com/watch?v=QAKGMUPvH5A" class="fancyboxLauncher stretched-link">
+
+                </a>
+                <a href="https://www.youtube.com/watch?v=ZNZNSRgZZBg" class="fancybox" title="臺北公宅，尊絕不凡"
+                   rel="fancybox">
+                    <img src="/images/video/Video01.png" style="display:none;">
+                </a>
+                <a href="https://www.youtube.com/watch?v=CJZeJChSYdo" class="fancybox" title="健康公宅共享共融新生活" rel="fancybox">
+                    <img src="/images/video/videoBanner01.jpg" style="display:none;">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4 pt-5 pb-1" style="background-color: #e3e3e3;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row mb-3">
+                    <div>
+                        <h2 class="text-danger m-0">Completed</h2>
+                        <h4 class="m-0 text-secondary font-weight-light">已招租住宅</h4>
+                    </div>
+                    <div class="pt-1 pl-1">
+                        <img src="/images/icons/line_02.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row my-3 finish">
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/xinglong" class="position-relative d-block">
+                <img src="/images/sites/xinglong-r2.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">文山區興隆D2社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/Jiankang" class="position-relative d-block">
+                <img src="/images/sites/pic_01_3.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">松山區健康社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="http://www.housing.gov.taipei/daLongdong" class="position-relative d-block">
+                <img src="/images/c_02.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">大同區大龍峒社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="http://www.housing.gov.taipei/ph2/home" class="position-relative d-block">
+                <img src="/images/c_01.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">文山區興隆社會住宅1區</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="http://www.housing.gov.taipei/ph/home" class="position-relative d-block">
+                <img src="/images/c_03.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">捷運聯合開發住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/xingtian-temple"
+               class="position-relative d-block">
+                <img src="/images/homepage/rent-01.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">行天宮社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/zhoumei" class="position-relative d-block">
+                <img src="/images/homepage/rent-02.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">洲美社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/dunhuang" class="position-relative d-block">
+                <img src="/images/homepage/rent-03.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">敦煌社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/emerging-markets"
+               class="position-relative d-block">
+                <img src="/images/homepage/emerging-markets.png" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">新興社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/wanlong" class="position-relative d-block">
+                <img src="/images/homepage/rent-05.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">萬隆社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/qingnian" class="position-relative d-block">
+                <img src="/images/homepage/qingnian.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">青年一期社會住宅</div>
+            </a>
+        </div>
+        <div class="col-lg-4 pb-lg-0 pb-4">
+            <a href="https://www.public-rental-housing.gov.taipei/Rental/Site/dongming" class="position-relative d-block">
+                <img src="/images/dongming/dingming_figure.jpg" class="w-100">
+                <div class="position-absolute w-100 p-3 text-white h5 m-0 text-truncate"
+                     style="background-color:rgba(0, 0, 0, 0.4); bottom:0;">東明社會住宅</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="fooder bg-primary">
+        <div class="container pt-4 pb-2">
+            <div class="row">
+                <div class="col-xl-5 col-lg-4 text-lg-left text-center pt-sm-3">
+                    <a href="/" class="mr-md-3 mx-auto mb-3 d-xl-inline-flex d-block">
+                        <img src="/images/logo/taipei-gov.png" class="img-fluid">
+                    </a>
+                    <a href="http://www.facebook.com/sharer.php?u=http://www.public-rental-housing.gov.taipei/"
+                       title="推薦給Facebook的好友" class="mx-1 d-inline-flex" target="_blank">
+                        <img src="/images/share_01.png" class="img-fluid">
+                    </a>
+                    <a href="https://plus.google.com/share?url=http://www.public-rental-housing.gov.taipei/&hl=zh-TW"
+                       title="推薦給Google+的好友" class="mx-1 d-inline-flex" target="_blank">
+                        <img src="/images/share_02.png" class="img-fluid">
+                    </a>
+                    <a href="http://twitter.com/share?url=http://www.public-rental-housing.gov.taipei/&hl=zh-TW"
+                       title="推薦給推特的好友" class="mx-1 d-inline-flex" target="_blank">
+                        <img src="/images/share_03.png" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-xl-7 col-lg-8 text-lg-right text-left h6 text-white mt-lg-0 mt-2"
+                     style="font-size: 14px; font-weight: 100; line-height: 24px;">
+                    服務時間：週一至週五 09:00~17:00(中午休息)
+                    <br>
+                    <p>
+                        都市發展局中區辦公室&nbsp;諮詢電話：02-27772186轉0再轉2
+                        <br />臺北市民當家熱線：1999
+                        <br />地 址：臺北市市府路1號九樓(南區) &nbsp;臺北市南京東路三段168號18樓(中區辦公室)
+                    </p>
+                    <p>
+                        臺北市居住資訊讚 版權所有
+                        <br />Copyright©The Taipei City Government. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu_panel" class="collapse" style="z-index: 1039;">
+        <div class="backdrop fadeIn animated"></div>
+        <ul class="nav m_nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/">首頁</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#" data-toggle="collapse" data-target="#collapseOne"
+                   aria-expanded="true" aria-controls="collapseOne">
+                    三合一聯合招租
+                </a>
+                <ul id="collapseOne" class="nav pl-3 collapse">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Rental/Site/muzha">
+                            木柵區木柵社會住宅
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Rental/Site/daqiaotou">
+                            大同區大橋頭社會住宅
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Rental/Site/jinlong">
+                            內湖區金龍社會住宅
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Rental/Site/minglun">
+                    大同區明倫社會住宅
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Checkpoint">申請檢核</a>
+            </li>
+            <li class="nav-item">
+                    
+                        <a href="#" class="nav-link text-white" data-toggle="modal" data-target="#beforeLoginModal">線上申請</a>
+
+                    
+                    
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Explain">配租概況表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Explain/HouseLocation">國/社會住宅位置</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/News">最新消息</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Statistics">收件統計</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/Note">操作說明</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="https://hello.gov.taipei/Front/main" target="_blank">意見反映</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="modal fade" id="beforeLoginModal" tabindex="-1" role="dialog" aria-labelledby="beforeLoginModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="beforeLoginModalLabel">申請注意事項</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="pl-3" style="font-size:1.1rem;border-left:3px #ff6e40 solid">
+                        為配合台北通為本府市政服務單一會員中心政策
+                        <br>
+                        本網站一律改由
+                        <span class="px-1 deep-orange-text text-accent-2 font-weight-bold"
+                              style="font-size:1.1em">台北通</span>系統提供帳密驗證服務
+                        <br>
+                        且需經
+                        <span class="px-1 deep-orange-text text-accent-2 font-weight-bold"
+                              style="font-size:1.1em">實名驗證成為金質會員</span>才能進行線上申請服務
+                    </div>
+                    <div class="py-3">
+                        若您未有帳號，可至台北通官方網站申請&#8594;
+                        <a href="https://id.taipei/tpcd/" target="_blank">台北通官網</a>
+                        <br>
+                        什麼是台北通？&#8594;
+                        <a href="https://id.taipei/tpcd/about/what-is-taipeipass" target="_blank">台北通說明</a>
+                        <br>
+                        台北通新手上路&#8594;
+                        <a href="https://id.taipei/tpcd/about/faq" target="_blank">功能教學</a>
+                    </div>
+                </div>
+                <div class="modal-footer d-block text-center">
+                    <a class="btn btn-primary" href="/citizen/login">台北通登入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#bookApplication').on('click', function () {
+                var url = $(this).data('url');
+                window.location.href = url;
+                $('#beforeLoginModal').modal('hide')
+            })
+
+            $('#menu_panel').on('show.bs.collapse', function () {
+                document.body.classList.add('modal-open');
+            });
+            $('#menu_panel').on('hide.bs.collapse', function () {
+                document.body.classList.remove('modal-open');
+            });
+        })
+    </script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110079026-7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-110079026-7');
+        </script>
+    
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/fancybox-2.1.7/source/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/js/fancybox-2.1.7/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/js/fancybox-2.1.7/source/helpers/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="/js/fancybox-2.1.7/source/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="/js/fancybox-2.1.7/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".finish").slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: true,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                ]
+            });
+
+
+            $('.fancybox').fancybox({
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                prevEffect: 'none',
+                nextEffect: 'none',
+                closeBtn: false,
+                helpers: {
+                    media: {},
+                    title: {
+                        type: 'outside'
+                    },
+                    buttons: {},
+                    thumbs: {
+                        width: 100,
+                        height: 100
+                    }
+                }
+            });
+            $(".fancyboxLauncher").on("click", function () {
+                $(".fancybox").eq(1).trigger("click");
+                return false;
+            });
+        });
+    </script>
+
+    <div class="modal fade show" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog" style="padding-right: 16px; display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto">網站合併公告</h5>
+                </div>
+                <div class="modal-body">
+                    <p>感謝大家對「臺北市社會住宅招租網」之支持，為提供更多租屋服務，本站即日起將合併至<a href="https://www.rent.gov.taipei/"> 「臺北市安心樂租網」 https://www.rent.gov.taipei/</a>，安心樂租網將繼續提供社會住宅招租服務並會持續改版，為市民提供更多租屋服務，謝謝。</p>
+                </div>
+                <div class="modal-footer text-center">
+                    <a href="https://www.rent.gov.taipei/" class="btn btn-success">跳轉至安心樂租網</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+    <script>
+        setTimeout(function () {
+            window.location.href = "https://www.rent.gov.taipei/";
+        }, 20000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant('.bg-#{$color}', $value, true);
+}
+
+@if $enable-gradients {
+  @each $color, $value in $theme-colors {
+    @include bg-gradient-variant('.bg-gradient-#{$color}', $value, true);
+  }
+}
+
+.bg-black {
+  --bg-opacity: 1;
+  background-color: rgba($black, var(--bg-opacity)) !important;
+}
+.bg-white {
+  --bg-opacity: 1;
+  background-color: rgba($white, var(--bg-opacity)) !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
