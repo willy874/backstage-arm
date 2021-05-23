@@ -7,7 +7,6 @@
         </div>
         <router-link to="/" class="d-flex align-items-center px-3">
           <img alt="logo" :src="LogoIcon" height="40" />
-          <img class="mx-3" alt="POSEIDON" :src="LogoText" height="24" />
         </router-link>
       </Header>
       <main>
